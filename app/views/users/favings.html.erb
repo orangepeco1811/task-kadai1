@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="<%= 'active' if current_page?(favings_user_path(@user)) %>"><%= link_to favings_user_path(@user) do %>完了タスク一覧 <span class="badge"><%= @count_favings %></span><% end %>
+      </li>
+        <%= render 'microposts/microposts', microposts: @favings %>
+
+    </ul>
+ 
+   </div>
+</div>
+    
